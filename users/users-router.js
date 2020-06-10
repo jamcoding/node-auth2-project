@@ -9,7 +9,7 @@ router.get('/', restricted, (req, res) => {
             res.status(200).json(user)
         }) 
         .catch(error => {
-            res.send(error);
+            res.status(401).json({ message: "You shall not pass!" });
         })
 });
 
